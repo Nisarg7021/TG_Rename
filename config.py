@@ -17,7 +17,7 @@ class Config(object):
     DOWNLOAD_LOCATION = "./MEGA_DOWNLOADS"
     TG_MAX_SIZE = 2040108421
     BOT_UPTIME  = time.time()
-    START_PIC   = os.environ.get("START_PIC", "https://graph.org/file/a2c87adb37e6559383511.jpg")
+    START_PIC   = os.environ.get("START_PIC", "")
     ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '').split()] #⚠️ Required
     FORCE_SUB   = os.environ.get("FORCE_SUB", "") #⚠️ Required Username without @
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "")) #⚠️ Required
