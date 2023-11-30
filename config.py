@@ -14,7 +14,6 @@ class Config(object):
     DB_URL  = os.environ.get("DB_URL","") #⚠️ Required
  
     # other configs
-    DOWNLOAD_LOCATION = "./MEGA_DOWNLOADS"
     TG_MAX_SIZE = 2040108421
     BOT_UPTIME  = time.time()
     START_PIC   = os.environ.get("START_PIC", "")
