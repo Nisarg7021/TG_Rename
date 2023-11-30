@@ -8,7 +8,6 @@ from config import Config, Txt
 import humanize
 from time import sleep
 
-
 @Client.on_message(filters.private & filters.command("start"))
 async def start(client, message):
 
@@ -34,7 +33,6 @@ async def start(client, message):
     else:
         await message.reply_text(text=Txt.START_TXT.format(user.mention), reply_markup=button, disable_web_page_preview=True)
 
-
 @Client.on_message(filters.private & (filters.document | filters.audio | filters.video))
 async def rename_start(client, message):
     file = getattr(message, message.media.value)
@@ -54,8 +52,6 @@ async def rename_start(client, message):
         await message.reply_text(text=text, reply_to_message_id=message.id, reply_markup=InlineKeyboardMarkup(buttons))
     except:
         pass
-
-
 
 @Client.on_callback_query()
 async def cb_handler(client, query: CallbackQuery):
